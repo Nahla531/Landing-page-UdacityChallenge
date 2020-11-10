@@ -27,11 +27,10 @@ const sections = document.querySelectorAll("section");
  * 
  */
 // check if section in viewport or not
-//
 secInview = (elem) => {
 	const window_height = window.innerHeight;
 	const section_bound = elem.getBoundingClientRect();
-	return (section_bound.top >= 0 && section_bound.bottom <= window.innerHeight);
+	return (section_bound.top < (window_height * 0.5) && section_bound.top > (window_height * -0.3))
 }
 
 
